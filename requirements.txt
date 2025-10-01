@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+gensim
+streamlit
+requests
+nest_asyncio
+pandas
+pyarrow
+nltk
