@@ -98,6 +98,7 @@ streamlit
 requests
 python-dotenv
 nest_asyncio
+pandas
 ```
 
 -----
@@ -218,3 +219,11 @@ Streamlit will automatically open a new tab in your web browser. If it doesn't, 
 3.  Enter a single, alphabetic word into the input box (e.g., "computer", "human", "graph").
 4.  Click the "Find Similar Words" button.
 5.  The results or any relevant error messages will be displayed on the page.
+6.  
+
+
+## Model Training Guidelines
+
+
+
+
