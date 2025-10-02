@@ -99,6 +99,7 @@ nest_asyncio
 pandas
 pyarrow
 nltk
+argparse
 ```
 
 -----
@@ -218,12 +219,40 @@ Streamlit will automatically open a new tab in your web browser. If it doesn't, 
 2.  Open your web browser and go to the Streamlit URL (`http://localhost:8501`).
 3.  Enter a single, alphabetic word into the input box (e.g., "computer", "human", "graph").
 4.  Click the "Find Similar Words" button.
-5.  The results or any relevant error messages will be displayed on the page.
-6.  
+5.  The results or any relevant error messages will be displayed on the page. 
 
 
 ## Model Training Guidelines
 
+The `train.py` script is designed to process text data that contains a mix of natural language and source code. It uses a 'code-aware' preprocessing pipeline to generate high-quality tokens before training a `gensim` Word2Vec model.
 
+The preprocessing logic is specifically tuned to:
 
+* Preserve important code entities like function_names, variable_names, and module.method calls.
+* Convert natural language to lowercase while maintaining the original case for code.
+* Remove common stop words and standalone numbers that add little value.
+* Filter out very short words and variables.
 
+###Dataset Requirements
+
+To use this script, your dataset must meet the following criteria:
+
+1. File Format: The dataset must be a Parquet file (.parquet).
+2. Column Name: The data must be loadable into a pandas DataFrame that contains a column named exactly "answer". This column should hold the raw text documents (strings) you want to train the model on.
+
+###How to Run the Training Script
+
+You can run the script from your terminal. It requires two command-line arguments to specify the locations of your dataset and where to save the final model.
+Command-line Arguments
+
+*    `--dataset-path` (Required): The full path to your input .parquet dataset file.
+
+*    `--model-path` (Required): The full path where the trained model file will be saved. It's conventional to name this file word2vec.model.
+
+Example Usage
+
+Here is an example command to run the script. Make sure you have activated your Python environment and installed the necessary dependencies.
+
+python train.py --dataset-path /path/to/your/tech_dataset.parquet --model-path ./word2vec.model
+
+After running, the script will log its progress to the console, and upon completion, the trained word2vec.model file will be available at the specified output path.
