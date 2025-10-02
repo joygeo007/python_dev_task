@@ -182,7 +182,7 @@ This error occurs when the input fails the validation rules (e.g., it contains o
 ```bash
 curl -X POST "http://localhost:8000/similar_words" \
 -H "Content-Type: application/json" \
--d '{"word": "word123"}'
+-d '{"word": "123"}'
 ```
 
 **Expected Response:**
