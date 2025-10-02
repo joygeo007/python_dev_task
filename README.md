@@ -215,14 +215,14 @@ The preprocessing logic is specifically tuned to:
 * Remove common stop words and standalone numbers that add little value.
 * Filter out very short words and variables.
 
-###Dataset Requirements
+### Dataset Requirements
 
 To use this script, your dataset must meet the following criteria:
 
 1. File Format: The dataset must be a Parquet file (.parquet).
 2. Column Name: The data must be loadable into a pandas DataFrame that contains a column named exactly "answer". This column should hold the raw text documents (strings) you want to train the model on.
 
-###How to Run the Training Script
+### How to Run the Training Script
 
 You can run the script from your terminal. It requires two command-line arguments to specify the locations of your dataset and where to save the final model.
 Command-line Arguments
