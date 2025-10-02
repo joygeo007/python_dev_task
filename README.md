@@ -91,14 +91,14 @@ pip install -r requirements.txt
 
 ```
 fastapi
-uvicorn[standard]
-pydantic
+uvicorn
 gensim
 streamlit
 requests
-python-dotenv
 nest_asyncio
 pandas
+pyarrow
+nltk
 ```
 
 -----
