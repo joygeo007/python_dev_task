@@ -235,6 +235,7 @@ Example Usage
 
 Here is an example command to run the script. Make sure you have activated your Python environment and installed the necessary dependencies.
 
+```bash
 python train.py --dataset-path /path/to/your/tech_dataset.parquet --model-path ./word2vec.model
-
+```
 After running, the script will log its progress to the console, and upon completion, the trained word2vec.model file will be available at the specified output path.
