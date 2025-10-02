@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 # Word Similarity Finder API & Streamlit App
 
 ## Overview
@@ -16,15 +7,8 @@ This project provides a simple web application for finding similar words using a
 1.  **FastAPI Backend (`api.py`):** A robust REST API that loads a Word2Vec model, accepts a word as input, and returns a list of the 5 most similar words. It includes input validation and graceful error handling.
 2.  **Streamlit Frontend (`app.py`):** A user-friendly web interface that allows users to enter a word, interact with the FastAPI backend, and view the results or any error messages.
 
-Additionally code has been provided for training the model too.
+Additionally, code has been provided for training the model (at the end).
 
-## Features
-
-  * REST API backend built with FastAPI.
-  * Interactive web UI built with Streamlit.
-  * Finds the top 5 most similar words using a Word2Vec model.
-  * Input validation to ensure only single, alphabetic words are processed.
-  * User-friendly error messages for words not in the vocabulary or invalid inputs.
 
 ## Project Structure
 
@@ -118,9 +102,7 @@ uvicorn api:app --host 0.0.0.0 --port 8000 --reload
 
 You should see output indicating that the server is running, typically on `http://127.0.0.1:8000`.
 
-Of course. Here is the "API Usage Examples" section formatted for your `README.md`.
 
------
 
 #### API Usage Examples
 
