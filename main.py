@@ -10,7 +10,7 @@ if st.button("Find Similar Words"):
     if input_word:
         try:
             # Make a POST request to the FastAPI endpoint
-            api_url = "http://localhost:8000/similar_words"
+            api_url = "https://word-similarity-api.onrender.com/similar_words"
             response = requests.post(api_url, json={"word": input_word})
 
             # Check the response status code
